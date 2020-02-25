@@ -1,26 +1,6 @@
 let flipped = false;
-let size = 8;
 let color1 = "white";
 let color2 = "black";
-
-// function populateTable(){
-//     let table = document.getElementById("chesstable");
-//     table.innerHTML = "";
-//     let row = true;
-//     let inner = "";
-//
-//     for(let i = 0; i < size; i++){
-//         inner += "<tr>";
-//         for(let i = 0; i < size; i++){
-//             if(row) inner += "<td class=\"odd box\"></td> \n";
-//             else inner += "<td class=\"even box\"></td> \n";
-//             row = !row
-//         }
-//         inner += "</tr>";
-//         row = !row
-//     }
-//     table.innerHTML = inner;
-// }
 
 function flipFunction(){
     changeColors(color1, color2);
@@ -58,7 +38,6 @@ function error(data){
 }
 
 window.onload = function(){
-    // populateTable();
     document.getElementById("flipButton").onclick = flipFunction;
     document.getElementById("randButton").onclick = randColors;
 }
