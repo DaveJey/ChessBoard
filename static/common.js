@@ -3,24 +3,24 @@ let size = 8;
 let color1 = "white";
 let color2 = "black";
 
-function populateTable(){
-    let table = document.getElementById("chesstable");
-    table.innerHTML = "";
-    let row = true;
-    let inner = "";
-
-    for(let i = 0; i < size; i++){
-        inner += "<tr>";
-        for(let i = 0; i < size; i++){
-            if(row) inner += "<td class=\"odd\"></td> \n";
-            else inner += "<td class=\"even\"></td> \n";
-            row = !row
-        }
-        inner += "</tr>";
-        row = !row
-    }
-    table.innerHTML = inner;
-}
+// function populateTable(){
+//     let table = document.getElementById("chesstable");
+//     table.innerHTML = "";
+//     let row = true;
+//     let inner = "";
+//
+//     for(let i = 0; i < size; i++){
+//         inner += "<tr>";
+//         for(let i = 0; i < size; i++){
+//             if(row) inner += "<td class=\"odd box\"></td> \n";
+//             else inner += "<td class=\"even box\"></td> \n";
+//             row = !row
+//         }
+//         inner += "</tr>";
+//         row = !row
+//     }
+//     table.innerHTML = inner;
+// }
 
 function flipFunction(){
     changeColors(color1, color2);
@@ -41,19 +41,16 @@ function randColors(){
 }
 
 function changeColors(color1, color2){
-    if(flipped){
-        for(let i = 0; i < document.getElementsByClassName("odd").length;i++)
+    for(let i = 0; i < document.getElementsByClassName("box").length / 2; i++){
+        if(flipped){
             document.getElementsByClassName("odd").item(i).style.backgroundColor = color1;
-        for(let i = 0; i < document.getElementsByClassName("even").length;i++)
             document.getElementsByClassName("even").item(i).style.backgroundColor = color2;
-        flipped = false;
-    }else{
-        for(let i = 0; i < document.getElementsByClassName("odd").length;i++)
+        }else{
             document.getElementsByClassName("odd").item(i).style.backgroundColor = color2;
-        for(let i = 0; i < document.getElementsByClassName("even").length;i++)
             document.getElementsByClassName("even").item(i).style.backgroundColor = color1;
-        flipped = true;
+        }
     }
+    flipped = !flipped;
 }
 
 function error(data){
@@ -61,7 +58,7 @@ function error(data){
 }
 
 window.onload = function(){
-    populateTable();
+    // populateTable();
     document.getElementById("flipButton").onclick = flipFunction;
     document.getElementById("randButton").onclick = randColors;
 }
