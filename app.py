@@ -11,6 +11,7 @@ def populateTable():
     for i in size:
         inner += '<tr>'
         for j in size:
+            a = "a change"
             if row:
                 inner += '<td class="odd"></td>'
             else:
