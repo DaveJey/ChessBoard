@@ -5,11 +5,11 @@ body{
 table{
     background-color: black;
     width: 270px;
-
     position: absolute;
     top: 30%;
     left: 40%;
 }
+
 td{
     width: 30px;
     height: 30px;
@@ -40,24 +40,12 @@ h1{
     top: 66.5%;
     left: 43.5%;
 }
+
 #randButton:hover{
     box-shadow: none;
     cursor: pointer;
     top: 67%;
     left: 44%;
-}
-
-#error{
-    color: red;
-    font-size: 500%;
-}
-
-.odd {
-    background-color: white;
-}
-
-.even {
-    background-color: black;
 }
 
 
