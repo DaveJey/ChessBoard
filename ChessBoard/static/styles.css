@@ -1,0 +1,70 @@
+body{
+    background-color: #E8B36F;
+}
+
+h1{
+    font-family: bebas-neue;
+    font-size: 300%;
+    background-color: #FFCF6E;
+    position: absolute;
+    box-shadow: 7px 7px #BA915B;
+    padding: 20px;
+}
+
+table{
+    background-color: black;
+    width: 270px;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+}
+
+td{
+    width: 30px;
+    height: 30px;
+}
+
+.even{
+    background-color: black;
+}
+
+#flipButton{
+    top: 7%;
+    left: 45%;
+    user-select: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+}
+
+#flipButton:hover{
+    box-shadow: none;
+    top: 7.5%;
+    left: 45.5%;
+    cursor: pointer;
+}
+
+.odd{
+    background-color: white;
+}
+
+#randButton{
+    top: 66.5%;
+    left: 43.5%;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select:none;
+}
+
+#randButton:hover{
+    box-shadow: none;
+    cursor: pointer;
+    top: 67%;
+    left: 44%;
+}
+
+
+
+
