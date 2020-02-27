@@ -10,7 +10,22 @@
 </head>
 <body>
     <h1 id="flipButton">FLIP</h1>
-    <table id="chesstable"></table>
+    <table id="chesstable">
+        {% for i in range(0, 8)%}
+            <tr>
+            {% for j in range(0, 4)%}
+                {% if i % 2 == 0 %}
+                    <td class="odd box"></td>
+                    <td class="even box"></td>
+                {% endif %}
+                {% if (i % 2 != 0) %}
+                    <td class="even box"></td>
+                    <td class="odd box"></td>
+                {% endif %}
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
     <h1 id="randButton">COLORS</h1></h2>
     <h2 id="error"></h2>
 </body>
