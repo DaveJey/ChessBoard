@@ -4,6 +4,7 @@ from ChessBoard.controller import ChessBoardController
 
 
 class View(FlaskView):
+    # To attach the controller to the view
     def __init__(self):
         self.controller = ChessBoardController()
 
